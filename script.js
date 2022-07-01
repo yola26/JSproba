@@ -1,53 +1,75 @@
 'use strict';
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
-
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-
-console.log(personalMovieDB);
-
-const num = 50;
-
-if (num < 49) {
-    console.log('Error');
-} else if (num > 100) {
-    console.log('Много');
-} else {
-    console.log('OK!');
+for (let i = 0; i < 3; i++) {
+    console.log (i);
 }
 
-const num = 50;
-(num === 50) ? console.log('OK!') : console.log('Error');
+let result = '';
+const lenght = 7;
+
+for (let i =1; i < lenght; i++) {
+
+    for (let j = 0; j < i; j++) {
+        result += "*";
+    }
+    result += '\n';
+}
+
+console.log(result);
 
 
 
-const num = 50;
+for (let i = 0; i < 3; i++) {
+    console.log ('First level: ${i}');
+    for (let j = 0; j < 3; j++) {
+        console.log ('Second level: ${j}');
+        for (let k = 0; k < 3; k++) {
+            console.log ('Third level: ${k}');
+        }
+    }
+}
 
-switch (num) {
-    case 49:
-        console.log('Неверно');
+
+
+
+for (let i = 5; i < 11; i++) {
+    console.log (i);
+}
+
+
+for (let i = 20; i > 9; i--) {
+    if (i ===13) {
         break;
-    case 100:
-        console.log('Неверно');
-        break;
-    case 50:
-        console.log('В точку!');
-        break;
-    default:
-        console.log('Не в этот раз!');
-        break;
-};
+    }
+    console.log (i);
+}
+
+
+for (let i = 2; i <=10; i++) {
+    if (i % 2 === 0) {
+      console.log (i);
+    }  
+}
+
+
+for (let i = 2; i <= 16; i++) {
+
+    if (i % 2 === 0) {
+        continue;
+    }
+    console.log(i);
+    
+}
+
+
+let i = 2;
+
+while (i <= 16) {
+    if (i % 2 === 0) {
+        i++;
+        continue;
+    } else {
+        console.log(i); 
+    }
+    i++;
+} 
